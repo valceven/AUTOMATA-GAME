@@ -1,5 +1,22 @@
 import pygame
 
+'''
+Current State	Mouse Click	LCTRL Pressed	Movement Keys Pressed	Next State
+IDLE (1)	    Yes	        -	            -	                    IDLE (1)
+IDLE (1)	    No	        Yes	            -	                    ATTACK (3)
+IDLE (1)	    No	        No	            Yes	                    WALK (2)
+IDLE (1)	    No	        No	            No	                    IDLE (1)
+WALK (2)	    Yes	        -	            -	                    IDLE (1)
+WALK (2)	    No	        Yes	            -	                    ATTACK (3)
+WALK (2)	    No	        No	            Yes	                    WALK (2)
+WALK (2)	    No	        No	            No	                    IDLE (1)
+ATTACK (3)	    Yes	        -	            -	                    IDLE (1)
+ATTACK (3)	    No	        Yes	            -	                    ATTACK (3)
+ATTACK (3)	    No	        No	            Yes                 	WALK (2)
+ATTACK (3)	    No	        No	            No	                    IDLE (1)
+
+'''
+
 class Player:
     IDLE = 1
     WALK = 2

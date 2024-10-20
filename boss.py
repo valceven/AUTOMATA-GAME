@@ -1,6 +1,16 @@
 import pygame
 import random
 
+'''
+Current State	Timer <= 0	Next State
+IDLE (1)	    Yes	        SHIFT (2)
+IDLE (1)	    No	        IDLE (1)
+SHIFT (2)	    Yes	        ATTACK (3)
+SHIFT (2)	    No	        SHIFT (2)
+ATTACK (3)	    Yes	        IDLE (1)
+ATTACK (3)	    No	        ATTACK (3)
+'''
+
 class Boss:
     IDLE = 1
     SHIFT = 2
