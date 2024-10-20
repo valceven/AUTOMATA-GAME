@@ -24,7 +24,7 @@ class Player:
 
     def __init__(self, position):
         self.position = pygame.Vector2(position)
-        self.speed = 100
+        self.speed = 500
         self.state = self.IDLE
 
     def handle_input(self, keys, mouse):

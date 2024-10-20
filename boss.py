@@ -19,7 +19,7 @@ class Boss:
 
     def __init__(self, name):
         self.name = name
-        self.position = pygame.Vector2(640, 360)
+        self.position = pygame.Vector2(1200, 360)
         self.radius = 50
         self.timer = 0
         self.set_idle()
