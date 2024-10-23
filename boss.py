@@ -25,16 +25,16 @@ class Boss:
         self.set_idle()
 
     def set_idle(self):
-        self.timer = random.randint(2, 8)
+        self.timer = random.randint(1, 4)
         self.state = self.IDLE
         self.score += 1
         
     def set_shift(self):
-        self.timer = random.randint(2, 8)
+        self.timer = random.randint(1, 4)
         self.state = self.SHIFT
     
     def set_attack(self):
-        self.timer = random.randint(2, 8)
+        self.timer = random.randint(1, 4)
         self.state = self.ATTACK
         
 

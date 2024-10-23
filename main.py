@@ -40,12 +40,13 @@ RED = (255, 0, 0)
 RUNNING = 1
 PAUSED = 2
 GAME_OVER = 3
+WIN = 4
 
 game_state = RUNNING
 
 def check_stat(player_state, boss_state):
     if player.position[0] > boss.position[0]:
-        return GAME_OVER
+        return WIN
     if player_state != Player.IDLE and boss_state == Boss.SHIFT:
         return GAME_OVER
     elif player_state == Player.WALK and boss_state == Boss.ATTACK:
@@ -56,7 +57,7 @@ def draw_text(text, position, color=(255, 255, 255)):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, position)
 
-timer = 60
+timer = 80
 # GAME LOOP
 running = True
 while running:
@@ -104,6 +105,11 @@ while running:
     elif game_state == GAME_OVER:
         screen.fill((0, 0, 0))
         draw_text("Game Over", (540, 360), color=(255, 0, 0))
+        draw_text("Press Q to Quit", (540, 400), color=(255, 255, 255))
+
+    elif game_state == GAME_OVER:
+        screen.fill((0, 0, 0))
+        draw_text("You Win", (540, 360), color=(255, 0, 0))
         draw_text("Press Q to Quit", (540, 400), color=(255, 255, 255))
         draw_text(f"Final Score: {int(timer - boss.score)}", (540, 320), color=(255,255,255))
 
