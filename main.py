@@ -6,12 +6,17 @@ from boss import Boss
 Current State	Event	                    Next State	           
 RUNNING (1)	    P key pressed	            PAUSED (2)	
 RUNNING (1)	    Game over condition met	    GAME_OVER (3)	
-RUNNING (1)	    No event	                RUNNING (1)	
+RUNNING (1)	    No event	                RUNNING (1)
+RUNNING (1)     Win Condition               WIN (4)
 PAUSED (2)	    P key pressed	            RUNNING (1)
 PAUSED (2)	    Quit event	                PAUSED (2)	
-PAUSED (2)	    No event	                PAUSED (2)	
+PAUSED (2)	    No event	                PAUSED (2)
+PAUSED (2)      Win Condition               WIN (4)
 GAME_OVER (3)	Q key pressed	            Quit	
 GAME_OVER (3)	No event	                GAME_OVER (3)
+WIN (4)         P key pressed               WIN (4)
+WIN (4)         No event                    WIN (4)
+WIN (4)         Q key pressed               WIN (4) (terminate)
 '''
 
 # INITIALIZE PYGAME
