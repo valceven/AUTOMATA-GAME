@@ -112,7 +112,7 @@ while running:
         draw_text("Game Over", (540, 360), color=(255, 0, 0))
         draw_text("Press Q to Quit", (540, 400), color=(255, 255, 255))
 
-    elif game_state == GAME_OVER:
+    elif game_state == WIN:
         screen.fill((0, 0, 0))
         draw_text("You Win", (540, 360), color=(255, 0, 0))
         draw_text("Press Q to Quit", (540, 400), color=(255, 255, 255))
